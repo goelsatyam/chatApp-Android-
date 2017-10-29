@@ -96,6 +96,7 @@ public class signIn extends AppCompatActivity {
        SharedPreferences internal_data = getSharedPreferences("check", MODE_PRIVATE);
        SharedPreferences.Editor edit = internal_data.edit();
        edit.putString("username", username);
+       edit.apply();
    }
 
 }

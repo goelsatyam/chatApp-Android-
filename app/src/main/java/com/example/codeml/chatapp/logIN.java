@@ -62,7 +62,7 @@ public class logIN extends AppCompatActivity {
 
                 try {
                      check = data.getChildren().iterator().next().getValue(user.class);
-                    
+
                     if(password.equals(check.password)){
                         saveUsername(username);
                         Toast.makeText(logIN.this, "Log in successful", Toast.LENGTH_SHORT).show();
@@ -96,5 +96,6 @@ public class logIN extends AppCompatActivity {
         SharedPreferences internal_data = getSharedPreferences("check", MODE_PRIVATE);
         SharedPreferences.Editor edit = internal_data.edit();
         edit.putString("username", username);
+        edit.apply();
     }
 }
