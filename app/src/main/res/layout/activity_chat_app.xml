@@ -9,7 +9,9 @@
     android:background="@android:color/white"
     tools:context="com.example.codeml.chatapp.chatApp">
 
+
     <Button
+        android:id="@+id/signin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SIGN IN"
@@ -18,10 +20,18 @@
         android:onClick="trySignIn"/>
 
     <Button
+        android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="LOG IN"
         android:layout_gravity="center"
         android:onClick="tryLogIn"/>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
 
 </LinearLayout>
