@@ -79,7 +79,8 @@ public class AddFriend extends AppCompatActivity {
                 list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                        add(i);
+                        add(names.get(i), my_username);
+                        add(my_username, names.get(i));
                     }
                 });
 
@@ -92,8 +93,7 @@ public class AddFriend extends AppCompatActivity {
         });
 
     }
-    public void add(int index){
-        final String username = names.get(index);
+    public void add(final String username,final String my_username){
 
         final DatabaseReference data = FirebaseDatabase.getInstance().getReference("friendList");
         Query query = data.child(my_username);

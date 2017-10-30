@@ -45,13 +45,11 @@ public class chatApp extends AppCompatActivity {
 
         DatabaseReference fb = FirebaseDatabase.getInstance().getReference();
 
-        if(!isSignin()){
-            //TODO
-        }
+        isSignin();
     }
 
     //Check if user has signIn previously
-    public Boolean isSignin(){
+    public void isSignin(){
 
 
         SharedPreferences internal_data = getSharedPreferences("check", MODE_PRIVATE);
@@ -60,11 +58,11 @@ public class chatApp extends AppCompatActivity {
 
         if(username == null){
             Toast.makeText(this, "Please Sign In", Toast.LENGTH_LONG).show();
-            return false;
+            return;
         }
 
         showFriends();
-        return true;
+
     }
 
     public void tryLogIn(View view) {
@@ -177,6 +175,5 @@ public class chatApp extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
 
 }

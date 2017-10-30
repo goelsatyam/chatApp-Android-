@@ -6,15 +6,17 @@ package com.example.codeml.chatapp;
 
 public class ChatMessages {
 
-    public String message;
-    public String username;
-    public String time;
+    public static String message;
+    public static String username;
+    public static String time;
 
     public ChatMessages(String message, String username, String time){
         this.message = message;
         this.username = username;
         this.time = time;
     }
+
+
 
 
 }

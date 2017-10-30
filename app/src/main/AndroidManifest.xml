@@ -28,8 +28,12 @@
             </intent-filter>
         </service>
 
+
         <activity android:name=".AddFriend" />
         <activity android:name=".showChat"></activity>
+
+        <activity android:name=".AddFriend"></activity>
+
     </application>
 
 </manifest>
