@@ -34,7 +34,7 @@ public class chatApp extends AppCompatActivity {
     private final String FIREBASE_USERNAME = "satyamgoel@gmail.com";
     private final String FIREBASE_PASSWORD = "awsome";
     private final static int REQ_CODE = 1234;
-    private static String my_username;
+    private static String my_username = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -169,7 +169,10 @@ public class chatApp extends AppCompatActivity {
             startActivityForResult(intent, 19);
             return true;
         }
-        else if (id == R.id.removeFriend) {
+        else if (id == R.id.removeFriend && my_username != null) {
+            Intent intent = new Intent(chatApp.this, removeFriend.class);
+            intent.putExtra("username", my_username);
+            startActivityForResult(intent, 19);
             return true;
         }
 
